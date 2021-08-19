@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Source Code Pro', Menlo, Monaco, sans-serif;
-    background: var(--bgDefault);
-    background: linear-gradient(325.81deg, var(--bgGradientFrom) 3.31%, var(--bgGradientTo) 99.4%);
+    background: var(--bgStrong);
+    // background: linear-gradient(325.81deg, var(--bgGradientFrom) 3.31%, var(--bgGradientTo) 99.4%);
     color: var(--faceDefault);
 }
 a,

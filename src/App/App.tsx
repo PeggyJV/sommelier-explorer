@@ -10,9 +10,11 @@ function App(): JSX.Element {
     }, []);
 
     return (
-        <div css={{ backgroundColor: 'var(--bgDefault)' }}>
+        <div>
             <Header />
-            <Cellars />
+            <div css={{ margin: '2rem auto', width: '800px' }}>
+                <Cellars />
+            </div>
             <Footer />
         </div>
     );

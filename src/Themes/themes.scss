@@ -76,13 +76,13 @@
 .brand {
 
     //bg (backgrounds)
-    --bgStrong: var(--gradient-brand);
+    --bgStrong: #0b002bf2;
     --bgPrimary: var(--purple95);
     --bgDefault: var(--purple90);
     --bgSecondary: var(--purple80);
     --bgGradientFrom: #18086B;
     --bgGradientTo: #05001F; 
-    
+
     //border
     --borderStrong: var(--black);
     --borderDefault: var(--purple60);
@@ -102,13 +102,13 @@
 
     //face (text & icons)
     --faceStrong: var(--white); 
-    --faceDefault: var(--mono20);
-    --facePrimary: var(--blue30);
-    --faceSecondary: var(--mono30);
-    --faceAccent: var(--violet30);
-    --faceWarn: var(--yelllow30);
-    --facePositive: var(--green30);
-    --faceNegative: var(--red30);
+    --faceDefault: var(--mono30);
+    --facePrimary: var(--blue40);
+    --faceSecondary: var(--mono40);
+    --faceAccent: var(--violet40);
+    --faceWarn: var(--yelllow40);
+    --facePositive: var(--green40);
+    --faceNegative: var(--red40);
     --faceDisabled: var(--mono60);
 
 }
