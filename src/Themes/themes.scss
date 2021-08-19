@@ -1,0 +1,114 @@
+@import './colors.scss';
+
+.dark {
+    //bg (backgrounds)
+    --bgStrong: var(--black);
+    --bgPrimary: var(--mono95);
+    --bgDefault: var(--mono90);
+    --bgSecondary: var(--mono80);
+
+    //border
+    --borderStrong: var(--black);
+    --borderDefault: var(--mono60);
+    --borderPrimary: var(--blue60);
+    --borderSecondary: var(--mono80);
+    --borderAccent: var(--violet60);
+
+    //obj backgrounds
+    --objPrimary: var(--blue70);
+    --objDefault: var(--mono70);
+    --objSecondary: var(--mono80);
+    --objAccent: var(--violet70);
+    --objWarn: var(--yellow70);
+    --objPositive: var(--green70);
+    --objNegative: var(--red70);
+    --objDisabled: var(--mono90);
+
+    //face (text & icons)
+    --faceStrong: var(--white);
+    --faceDefault: var(--mono20);
+    --facePrimary: var(--blue30);
+    --faceSecondary: var(--mono30);
+    --faceAccent: var(--violet30);
+    --faceWarn: var(--yelllow30);
+    --facePositive: var(--green30);
+    --faceNegative: var(--red30);
+    --faceDisabled: var(--mono60);
+}
+
+.light {
+
+    //bg (backgrounds)
+    --bgStrong: var(--white);
+    --bgPrimary: var(--mono10);
+    --bgDefault: var(--mono20);
+    --bgSecondary: var(--mono30);
+    
+    //border
+    --borderStrong: var(--white);
+    --borderPrimary: var(--blue40);
+    --borderDefault: var(--mono40);
+    --borderSecondary: var(--mono30);
+    --borderAccent: var(--violet40);
+
+    //obj backgrounds
+    --objPrimary: var(--blue20);
+    --objDefault: var(--mono20);
+    --objAccent: var(--violet20);
+    --objWarn: var(--yellow20);
+    --objPositive: var(--green20);
+    --objNegative: var(--red20);
+    --objDisabled: vary(mono10);
+
+    //face (text & icons)
+    --faceStrong: var(--black); 
+    --faceDefault: var(--mono80);
+    --facePrimary: var(--blue70);
+    --faceSecondary: var(--mono70);
+    --faceAccent: var(--violet70);
+    --faceWarn: var(--yellow70);
+    --facePositive: var(--green70);
+    --faceNegative: var(--red70);
+    --faceDisabled: var(--mono40);
+
+}
+
+.brand {
+
+    //bg (backgrounds)
+    --bgStrong: var(--gradient-brand);
+    --bgPrimary: var(--purple95);
+    --bgDefault: var(--purple90);
+    --bgSecondary: var(--purple80);
+    --bgGradientFrom: #18086B;
+    --bgGradientTo: #05001F; 
+    
+    //border
+    --borderStrong: var(--black);
+    --borderDefault: var(--purple60);
+    --borderPrimary: var(--blue60);
+    --borderSecondary: var(--purple80);
+    --borderAccent: var(--violet60);
+
+    //obj backgrounds
+    --objPrimary: var(--blue70);
+    --objDefault: var(--purple70);
+    --objSecondary: var(--purple80);
+    --objAccent: var(--violet70);
+    --objWarn: var(--yellow70);
+    --objPositive: var(--green70);
+    --objNegative: var(--red70);
+    --objDisabled: vary(mono90);
+
+    //face (text & icons)
+    --faceStrong: var(--white); 
+    --faceDefault: var(--mono20);
+    --facePrimary: var(--blue30);
+    --faceSecondary: var(--mono30);
+    --faceAccent: var(--violet30);
+    --faceWarn: var(--yelllow30);
+    --facePositive: var(--green30);
+    --faceNegative: var(--red30);
+    --faceDisabled: var(--mono60);
+
+}

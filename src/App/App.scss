@@ -1,0 +1,23 @@
+@import 'themes/themes.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Source Code Pro', Menlo, Monaco, sans-serif;
+    background: var(--bgDefault);
+    background: linear-gradient(325.81deg, var(--bgGradientFrom) 3.31%, var(--bgGradientTo) 99.4%);
+    color: var(--faceDefault);
+}
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
