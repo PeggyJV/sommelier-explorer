@@ -3,13 +3,17 @@
 
 html {
     font-size: 16px;
+    background: #05001f;
 }
 
 body {
     font-family: 'Source Code Pro', Menlo, Monaco, sans-serif;
-    background: var(--bgStrong);
+    // background: var(--bgStrong);
     // background: linear-gradient(325.81deg, var(--bgGradientFrom) 3.31%, var(--bgGradientTo) 99.4%);
+    // background: linear-gradient(170deg, #05001F, #18086B);
     color: var(--faceDefault);
+    // height: 100%;
+    height: 100vh;
 }
 a,
 a:hover,
@@ -20,4 +24,14 @@ a:visited {
 p {
     margin: 0;
     padding: 0;
+}
+
+.app {
+    background: radial-gradient(
+        100% 100% at 100% 100%,
+        var(--bgGradientFrom) 0%,
+        var(--bgGradientTo) 100%
+    );
+
+    min-height: 100vh;
 }

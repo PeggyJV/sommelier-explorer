@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextPNL, TextSm, TextLg, TextMd, Ticker } from 'Components';
+import { Text, TextPNL, Ticker, Button } from 'Components';
 import Box from '@material-ui/core/Box';
 import { ReactComponent as Logo } from 'Assets/logo.svg';
 import { css } from '@emotion/react';
@@ -12,36 +12,44 @@ export const Header = (): JSX.Element => (
                 borderTop: '1px solid var(--borderSecondary)',
                 borderBottom: '1px solid var(--borderSecondary)',
             }}
-            p='1.5rem 0'
+            p='1rem 0'
             display='flex'
             justifyContent='center'
         >
             <Box
                 display='flex'
-                justifyContent='space-between'
+                justifyContent='center'
                 flexGrow={1}
                 alignItems='center'
                 css={{
                     maxWidth: '800px',
+                    position: 'relative',
                 }}
             >
-                <div>
-                    <TextLg>Search</TextLg>
-                </div>
+                {/* <div>
+                    <Text.lg variant='default'>Search</Text.lg>
+                </div> */}
                 <Box
                     display='flex'
                     alignItems='center'
                     css={{ '> span': { padding: '0 0.5rem' } }}
                 >
-                    <TextLg>Cellar</TextLg>
+                    <Text.lg variant='strong'>Cellar</Text.lg>
                     <Logo height={36} />
 
-                    <TextLg>Explorer</TextLg>
+                    <Text.lg variant='strong'>Explorer</Text.lg>
                 </Box>
-                <TextLg>Launch App</TextLg>
+                <div css={{ position: 'absolute', right: '0' }}>
+                    <Button variant='default'>Launch App</Button>
+                </div>
             </Box>
         </Box>
-        <Box display='flex' justifyContent='center' p='1.5rem 0'>
+        <Box
+            display='flex'
+            justifyContent='center'
+            p='1rem 0'
+            css={{ borderBottom: '1px solid var(--borderSecondary)' }}
+        >
             <Nav />
         </Box>
     </div>
@@ -50,18 +58,18 @@ export const Header = (): JSX.Element => (
 const StatsReel = (): JSX.Element => (
     <div>
         <Ticker>
-            <Box display='flex' justifyContent='space-between' p='1.5rem 0'>
-                <TextSm>
+            <Box display='flex' justifyContent='space-between' p='0.75rem 0'>
+                <Text.sm>
                     Total value locked{' '}
                     <TextPNL isNegative={false}>$12,323,345</TextPNL>
-                </TextSm>
-                <TextSm>Transactions 19,273,025</TextSm>
-                <TextSm>
+                </Text.sm>
+                <Text.sm>Transactions 19,273,025</Text.sm>
+                <Text.sm>
                     Cellars <TextPNL isNegative={false}>10,037</TextPNL>
-                </TextSm>
-                <TextSm>
+                </Text.sm>
+                <Text.sm>
                     SOMM rewards <TextPNL isNegative={false}>12,456</TextPNL>
-                </TextSm>
+                </Text.sm>
             </Box>
         </Ticker>
     </div>
@@ -73,27 +81,28 @@ const Nav = (): JSX.Element => {
         border: '1px solid var(--borderPrimary)',
     };
     const navStyles = {
-        borderRadius: '4px',
-        padding: '0.75rem 1.5rem',
+        borderRadius: '6px',
+        padding: '0.5rem 1.5rem',
+        color: 'var(--facePrimary)',
     };
     return (
         <Box
             display='inline-flex'
             justifyContent='space-between'
             css={{
-                borderRadius: '0.25rem',
-                backgroundColor: 'var(--objDefault)',
-                border: '1px solid var(--borderSecondary)',
+                borderRadius: '6px',
+                backgroundColor: 'var(--objSecondary)',
+                // border: '1px solid var(--borderSecondary)',
             }}
         >
-            <Box css={{ ...activeStyles, ...navStyles }}>
-                <TextMd>Cellars</TextMd>
+            <Box css={{ ...navStyles, ...activeStyles }}>
+                <Text.md variant='strong'>Cellars</Text.md>
             </Box>
             <Box css={navStyles}>
-                <TextMd>Governance</TextMd>
+                <Text.md variant='primary'>Governance</Text.md>
             </Box>
             <Box css={navStyles}>
-                <TextMd>Validators</TextMd>
+                <Text.md variant='primary'>Validators</Text.md>
             </Box>
         </Box>
     );

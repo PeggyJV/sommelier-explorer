@@ -1,5 +1,5 @@
 import Box from '@material-ui/core/Box';
-import { TextSm } from 'Components/Text/Text';
+import { Text } from 'Components/Text/Text';
 import { ReactComponent as Logo } from 'Assets/logo.svg';
 
 export const Footer = (): JSX.Element => {
@@ -11,6 +11,8 @@ export const Footer = (): JSX.Element => {
                 bottom: '0',
                 padding: '1rem',
                 backgroundColor: 'var(--bgPrimary)',
+                borderTop: '1px solid var(--borderSecondary)',
+                backdropFilter: 'blur(16px)',
             }}
         >
             <div css={{ width: '800px', margin: '0 auto' }}>
@@ -24,18 +26,23 @@ export const Footer = (): JSX.Element => {
                     alignItems='center'
                 >
                     <Box display='flex' alignItems='center'>
-                        <TextSm>Powered by Sommelier</TextSm>&nbsp;
+                        <Text.sm variant='strong'>Powered by Sommelier</Text.sm>
+                        &nbsp;
                         <Logo height='17' />
                     </Box>
                     <Box display='flex' justifyContent='space-between'>
                         <div>
-                            <TextSm>Join our Community</TextSm>
+                            <Text.sm variant='strong'>
+                                Join our Community
+                            </Text.sm>
                         </div>
                         <div>
-                            <TextSm>Follow our Twitter</TextSm>
+                            <Text.sm variant='strong'>
+                                Follow our Twitter
+                            </Text.sm>
                         </div>
                         <div>
-                            <TextSm>Read our Blog</TextSm>
+                            <Text.sm variant='strong'>Read our Blog</Text.sm>
                         </div>
                     </Box>
                 </Box>

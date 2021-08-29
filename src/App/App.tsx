@@ -10,9 +10,20 @@ function App(): JSX.Element {
     }, []);
 
     return (
-        <div>
+        <div className='app'>
             <Header />
-            <div css={{ margin: '2rem auto', width: '800px' }}>
+            <div
+                css={{
+                    margin: '0 auto',
+                    padding: '2rem 0',
+                    width: '920px',
+                    '> div': {
+                        margin: '2rem 0',
+                    },
+                }}
+            >
+                <Cellars />
+                <Cellars />
                 <Cellars />
             </div>
             <Footer />

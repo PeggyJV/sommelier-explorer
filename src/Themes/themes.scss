@@ -1,5 +1,21 @@
 @import './colors.scss';
 
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+@function alpha($color, $opacity) {
+    $color: str-replace($color, 'var(');
+    $color: str-replace($color, ')');
+    $color-r: var(#{$color+'-r'});
+    $color-g: var(#{$color+'-g'});
+    $color-b: var(#{$color+'-b'});
+    @return rgba($color-r, $color-g, $color-b, $opacity);
+}
 .dark {
     //bg (backgrounds)
     --bgStrong: var(--black);
@@ -77,38 +93,124 @@
 
     //bg (backgrounds)
     --bgStrong: #0b002bf2;
-    --bgPrimary: var(--purple95);
-    --bgDefault: var(--purple90);
-    --bgSecondary: var(--purple80);
-    --bgGradientFrom: #18086B;
-    --bgGradientTo: #05001F; 
+    --bgPrimary: var(--purple95alpha);
+    --bgDefault: var(--purple90alpha);
+    --bgSecondary: var(--purple80alpha);
+    --bgGradientFrom: #3C0671;
+    --bgGradientTo: #05010F; 
 
     //border
     --borderStrong: var(--black);
+    
     --borderDefault: var(--purple60);
+    --borderDefaultHover: var(--purple50);
+    --borderDefaultSelected: var(--purple40);
+    --borderDefaultDisabled: var(--purple80);
+    
     --borderPrimary: var(--blue60);
-    --borderSecondary: var(--purple80);
+    --borderPrimaryHover: var(--blue50);
+    --borderPrimarySelected: var(--blue40);
+    --borderPrimaryDisabled: var(--blue80);
+
+    --borderSecondary: var(--purple90);
+    --borderSecondaryHover: var(--purple80);
+    --borderSecondarySelected: var(--purple70);
+    --borderSecondaryDisabled: var(--purple95);
+
+    --borderPositive: var(--green60);
+    --borderPositiveHover: var(--green50);
+    --borderPositiveSelected: var(--green40);
+    --borderPositiveDisabled: var(--green80);
+
+
+    --borderNegative: var(--red60);
+    --borderNegativeHover: var(--red50);
+    --borderNegativeSelected: var(--red40);
+    --borderNegativeDisabled: var(--red80);
+
+
+    --borderWarn: var(--yellow60);
+    --borderWarnHover: var(--yellow50);
+    --borderWarnSelected: var(--yellow40);
+    --borderWarnDisabled: var(--yellow80);
+
     --borderAccent: var(--violet60);
+    --borderAccentHover: var(--violet50);
+    --borderAccentSelected: var(--violet40);
+    --borderAccentDisabled: var(--violet80);
+
+    --borderTertiary: var(--purple90);
+    --borderTertiaryHover: var(--purple80);
+    --borderTertiarySelected: var(--purple70);
+    --borderTertiaryDisabled: var(--purple95);
 
     //obj backgrounds
     --objPrimary: var(--blue70);
+    --objPrimaryHover: var(--blue60);
+    --objPrimarySelected: var(--blue50);
+    --objPrimaryDisabled: var(--blue90);
+
     --objDefault: var(--purple70);
-    --objSecondary: var(--purple80);
+    --objDefaultHover: var(--purple60);
+    --objDefaultSelected: var(--purple50);
+    --objDefaultDisabled: var(--purple90);
+
+    --objSecondary: var(--purple80alpha);
+
+    --objTertiary: transparent;
+
     --objAccent: var(--violet70);
-    --objWarn: var(--yellow70);
+    --objAccentHover: var(--violet60);
+    --objAccentSelected: var(--violet60);
+    --objAccentDisabled: var(--violet90);
+
     --objPositive: var(--green70);
+    --objPositiveHover: var(--green60);
+    --objPositiveSelected: var(--green50);
+    --objPositiveDisabled: var(--green90);
+    
+    --objWarn: var(--yellow70);
+    --objWarnHover: var(--yellow60);
+    --objWarnSelected: var(--yellow50);
+    --objWarnDisabled: var(--yellow90);
+    
     --objNegative: var(--red70);
-    --objDisabled: vary(mono90);
+    --objNegativeHover: var(--red60);
+    --objNegativeSelected: var(--red50);
+    --objNegativeDisabled: var(--red90);
+
 
     //face (text & icons)
     --faceStrong: var(--white); 
-    --faceDefault: var(--mono30);
-    --facePrimary: var(--blue40);
-    --faceSecondary: var(--mono40);
-    --faceAccent: var(--violet40);
-    --faceWarn: var(--yelllow40);
-    --facePositive: var(--green40);
-    --faceNegative: var(--red40);
-    --faceDisabled: var(--mono60);
+    --faceStrongHover: var(--mono40);
+    --faceStrongDisabled: var(--mono70);
+
+    --faceDefault: var(--mono20);
+    --faceDefaultHover: var(--mono40);
+    --faceDefaultDisabled: var(--mono70);
+
+    --facePrimary: var(--blue20);
+    --facePrimaryHover: var(--blue40);
+    --facePrimaryDisabled: var(--blue70);
+
+    --faceSecondary: var(--mono30);
+    
+    --faceAccent: var(--violet20);
+    --faceAccentHover: var(--violet40);
+    --faceAccentDisabled: var(--violet70);
+
+    --faceWarn: var(--yelllow20);
+    --faceWarnHover: var(--yelllow40);
+    --faceWarnDisabled: var(--yelllow70);
+    
+    --facePositive: var(--green20);
+    --facePositiveHover: var(--green40);
+    --facePositiveDisabled: var(--green70);
+    
+    --faceNegative: var(--red20);
+    --faceNegativeHover: var(--red40);
+    --faceNegativeDisabled: var(--red70);
+    
+
 
 }
