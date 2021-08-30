@@ -3,6 +3,7 @@ import { Text, TextPNL, Ticker, Button } from 'Components';
 import Box from '@material-ui/core/Box';
 import { ReactComponent as Logo } from 'Assets/logo.svg';
 import { css } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 export const Header = (): JSX.Element => (
     <div css={{ backgroundColor: 'var(--bgPrimary)' }}>
@@ -99,7 +100,8 @@ const Nav = (): JSX.Element => {
                 <Text.md variant='strong'>Cellars</Text.md>
             </Box>
             <Box css={navStyles}>
-                <Text.md variant='primary'>Governance</Text.md>
+                <Text.md variant='primary'>
+                <Link to='/governance'>Governance</Link></Text.md>
             </Box>
             <Box css={navStyles}>
                 <Text.md variant='primary'>Validators</Text.md>
