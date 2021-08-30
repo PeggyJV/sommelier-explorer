@@ -54,7 +54,6 @@ export const Button = ({
         outline: 'none',
         cursor: 'pointer',
         '&:hover': {
-            color: `var(--face${color}Hover)`,
             border: `1px solid var(--border${color}Hover)`,
             backgroundColor: `var(--obj${color}Hover)`,
         },
@@ -66,7 +65,6 @@ export const Button = ({
         backgroundColor: `var(--obj${color}Disabled)`,
         cursor: 'not-allowed',
         '&:hover': {
-            color: `var(--face${color}Disabled)`,
             border: `1px solid var(--border${color}Disabled)`,
             backgroundColor: `var(--obj${color}Disabled)`,
         },
@@ -95,19 +93,15 @@ export const Button = ({
         <button css={buttonStyles}>
             {disabled ? (
                 <TextComponent
-                    variant={variant === 'transparent' ? 'default' : variant}
+                    variant='strong'
                     css={{
-                        color: `var(--face${color}Disabled)`,
+                        color: `var(--faceStrongDisabled)`,
                     }}
                 >
                     {children}
                 </TextComponent>
             ) : (
-                <TextComponent
-                    variant={variant === 'transparent' ? 'default' : variant}
-                >
-                    {children}
-                </TextComponent>
+                <TextComponent variant='strong'>{children}</TextComponent>
             )}
         </button>
     );
