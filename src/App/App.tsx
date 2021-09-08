@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.scss';
-import { Header, Footer } from 'Components';
+import { Header, Footer, Sheet } from 'Components';
 import { Cellars } from 'Cellars/Cellars';
 import { Validators } from 'Validators/Validators';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -29,17 +29,23 @@ function App(): JSX.Element {
                         }}
                     >
                         <Route exact path='/'>
-                            <Cellars />
-                            <Cellars />
-                            <Cellars />
+                            <Validators />
                         </Route>
                         <Route path='/governance'>
-                            <div>No open proposals</div>
+                            <Sheet>
+                                <Sheet.body>
+                                    <div
+                                        css={{
+                                            textAlign: 'center',
+                                        }}
+                                    >
+                                        No open proposals
+                                    </div>
+                                </Sheet.body>
+                            </Sheet>
                         </Route>
-                        <Route path='/validators'>
-                            <div>
-                                <Validators />
-                            </div>
+                        <Route path='/cellars'>
+                            <Cellars />
                         </Route>
                     </div>
                     <Footer />

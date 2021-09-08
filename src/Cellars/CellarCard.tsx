@@ -60,7 +60,8 @@ export const CellarCard = ({
                         </td>
                         <td align='right'>
                             <Text.sm variant='strong'>
-                                {toUSD(stats?.tvl)}
+                                {/* {toUSD(stats?.tvl)} */}
+                                {'$---,---.--'}
                             </Text.sm>
                         </td>
                     </tr>
@@ -70,7 +71,8 @@ export const CellarCard = ({
                         </td>
                         <td align='right'>
                             <Text.sm variant='strong'>
-                                {toUSD(stats?.totalDeposits)}
+                                {/* {toUSD(stats?.totalDeposits)} */}
+                                {'$---,---.--'}
                             </Text.sm>
                         </td>
                     </tr>
@@ -80,13 +82,14 @@ export const CellarCard = ({
                         </td>
                         <td align='right'>
                             <Text.sm variant='positive'>
-                                {toUSD(stats?.fees)}
+                                {/* {toUSD(stats?.fees)} */}
+                                {'$--,---.--'}
                             </Text.sm>
                         </td>
                     </tr>
                     <tr>
                         <td colSpan={2}>
-                            <ProgressBar percent='71' />
+                            <ProgressBar percent='1' />
                         </td>
                     </tr>
                     <tr>
@@ -94,14 +97,14 @@ export const CellarCard = ({
                             <Text.sm variant='default'>Limit</Text.sm>
                         </td>
                         <td align='right'>
-                            <Text.sm variant='strong'>{'$500.00k'}</Text.sm>
+                            <Text.sm variant='strong'>{'$--.--k'}</Text.sm>
                         </td>
                     </tr>
                 </table>
             </Sheet.body>
             <Sheet.footer>
-                <Button variant='primary' display='block' size='medium'>
-                    {'Add Liquidity'}
+                <Button variant='accent' display='block' size='medium'>
+                    {'Coming Soon'}
                 </Button>
             </Sheet.footer>
         </Sheet>

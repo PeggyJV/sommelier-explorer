@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import { TextTitle, Text, Sheet } from 'Components';
 import { CellarCard } from './CellarCard';
 import swirl1 from '../Assets/swirl1.png';
-import { url } from 'inspector';
 
 export const Cellars = (): JSX.Element => {
     const token0 = {

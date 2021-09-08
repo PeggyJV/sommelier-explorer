@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = (): JSX.Element => (
     <div css={{ backgroundColor: 'var(--bgPrimary)' }}>
-        <StatsReel />
+        {/* <StatsReel /> */}
         <Box
             css={{
                 borderTop: '1px solid var(--borderSecondary)',
@@ -19,11 +19,11 @@ export const Header = (): JSX.Element => (
         >
             <Box
                 display='flex'
-                justifyContent='center'
+                justifyContent='space-between'
                 flexGrow={1}
                 alignItems='center'
                 css={{
-                    maxWidth: '800px',
+                    maxWidth: '920px',
                     position: 'relative',
                 }}
             >
@@ -35,13 +35,19 @@ export const Header = (): JSX.Element => (
                     alignItems='center'
                     css={{ '> span': { padding: '0 0.5rem' } }}
                 >
-                    <Text.lg variant='strong'>Cellar</Text.lg>
-                    <Logo height={36} />
+                    <Logo height={42} width={42} />
+                    <Text.lg variant='strong'>Sommelier</Text.lg>
 
                     <Text.lg variant='strong'>Explorer</Text.lg>
                 </Box>
                 <div css={{ position: 'absolute', right: '0' }}>
-                    <Button variant='default'>Launch App</Button>
+                    <a
+                        href='https://app.sommelier.finance'
+                        target='_blank'
+                        rel='noreferrer'
+                    >
+                        <Button variant='default'>Launch App</Button>
+                    </a>
                 </div>
             </Box>
         </Box>
@@ -50,8 +56,11 @@ export const Header = (): JSX.Element => (
             justifyContent='center'
             p='1rem 0'
             css={{ borderBottom: '1px solid var(--borderSecondary)' }}
+            // css={{ background: 'var(--bgGradientTo)' }}
         >
-            <Nav />
+            <div css={{ width: '920px' }}>
+                <Nav />
+            </div>
         </Box>
     </div>
 );
@@ -97,23 +106,17 @@ const Nav = (): JSX.Element => {
             }}
         >
             <NavLink exact to='/' css={navStyles} activeStyle={activeStyles}>
-                <Text.md variant='strong'>Cellars</Text.md>
+                <Text.md variant='strong'>Validators</Text.md>
             </NavLink>
-
+            <NavLink to='/cellars' css={navStyles} activeStyle={activeStyles}>
+                <Text.md variant='primary'>Cellars</Text.md>
+            </NavLink>
             <NavLink
                 to='/governance'
                 css={navStyles}
                 activeStyle={activeStyles}
             >
                 <Text.md variant='primary'>Governance</Text.md>
-            </NavLink>
-
-            <NavLink
-                to='/validators'
-                css={navStyles}
-                activeStyle={activeStyles}
-            >
-                <Text.md variant='primary'>Validators</Text.md>
             </NavLink>
         </Box>
     );

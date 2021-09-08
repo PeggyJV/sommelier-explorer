@@ -55,7 +55,7 @@ export interface Response<T> {
 // export type ValidatorResponse = Response<ValidatorType>;
 
 type ValidatorResponse = {
-    data: ValidatorType | undefined;
+    data: { validators: Array<ValidatorType> } | undefined;
     isLoading: boolean;
     status: string;
     isError: boolean;
@@ -68,7 +68,9 @@ export const useValidators = (): ValidatorResponse => {
         );
         if (!response.ok) throw new Error(`Failed to fetch validators`);
 
-        const data = await (response.json() as Promise<ValidatorType>);
+        const data = await (response.json() as Promise<{
+            validators: ValidatorType[];
+        }>);
 
         return data;
     };
