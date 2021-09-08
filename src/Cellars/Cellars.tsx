@@ -33,7 +33,7 @@ export const Cellars = (): JSX.Element => {
                 />
                 <Text.md variant='accent'>Cellars</Text.md>
                 <br />
-                <TextTitle>Châteauneuf-du-Pape</TextTitle>
+                <br />
                 <div
                     css={{
                         minWidth: '600px',
@@ -46,17 +46,6 @@ export const Cellars = (): JSX.Element => {
                         position: 'relative',
                     }}
                 >
-                    {/* <img
-                        src={swirl1}
-                        alt='swirl'
-                        css={{
-                            position: 'absolute',
-                            right: 0,
-                            top: -50,
-                            width: 160,
-                            zIndex: 0,
-                        }}
-                    /> */}
                     <CellarCard token0={token0} token1={token1} stats={stats} />
                     <CellarCard token0={token0} token1={token1} stats={stats} />
                     <CellarCard token0={token0} token1={token1} stats={stats} />
